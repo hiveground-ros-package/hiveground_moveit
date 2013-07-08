@@ -190,7 +190,7 @@ void PointCloudOctomapUpdater2::cloudMsgCallback(const sensor_msgs::PointCloud2:
 
   bool cloud_with_rgb_data = false;
   std::string field_list = pcl::getFieldsList (*cloud_msg);
-  ROS_INFO_STREAM_ONCE("Cloud type: " << field_list);
+  ROS_DEBUG_STREAM_ONCE("Cloud type: " << field_list);
   if(field_list.rfind("rgb") != std::string::npos)
   {
     cloud_with_rgb_data = true;
