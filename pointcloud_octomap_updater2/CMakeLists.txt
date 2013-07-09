@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(pointcloud_octomap_updater2)
 
-find_package(Eigen REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rosconsole
@@ -9,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   pluginlib
   moveit_ros_perception
 )
+find_package(Boost REQUIRED)
 
 catkin_package(
   INCLUDE_DIRS
